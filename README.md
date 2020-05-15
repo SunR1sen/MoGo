@@ -1,0 +1,2 @@
+# MoGo
+Training layout
