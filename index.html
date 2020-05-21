@@ -14,13 +14,13 @@
 </head>
 <body>
 
-   <header class="header">
+   <header id="header" class="header">
       <div class="container">
          <div class="header__inner">
             <div class="header__logo">MoGo</div>
 
             <nav class="nav">
-               <a class="nav__link" href="#">About</a>
+               <a class="nav__link" href="#" data-scroll="#about">About</a>
                <a class="nav__link" href="#">Service</a>
                <a class="nav__link" href="#">Work</a>
                <a class="nav__link" href="#">Blog</a>
@@ -32,13 +32,18 @@
                   <i class="fas fa-search"></i>
                </a>
             </nav>
-         </div>
-      </div>
+
+            <button class="nav-toggle" type="button">
+               <span class="nav-toggle__item">Menu</span>
+            </button>
+
+         </div> <!-- ./header__inner -->
+      </div> <!-- ./container -->
    </header>
 
    <div class="page">
 
-      <div class="intro">
+      <div id="intro" class="intro">
          <div class="container">
             <div class="intro__inner">
                <h2 class="intro__suptitle">Creative Template</h2>
@@ -47,32 +52,34 @@
                <a class="btn" href="#">Learn More</a>
             </div>
          </div>
-      </div>
+      
 
-      <div class="slider">
-         <div class="container">
-            <div class="slider__inner">
-               <div class="slider__item active">
-                  <span class="slider__num">01</span>
-                  <span class="slider__text">Intro</span>
-               </div>
-               <div class="slider__item">
-                  <span class="slider__num">02</span>
-                  <span class="slider__text">Work</span>
-               </div>
-               <div class="slider__item">
-                  <span class="slider__num">03</span>
-                  <span class="slider__text">About</span>
-               </div>
-               <div class="slider__item">
-                  <span class="slider__num">04</span>
-                  <span class="slider__text">Contacts</span>
+         <div class="slider">
+            <div class="container">
+               <div class="slider__inner">
+                  <div class="slider__item active">
+                     <span class="slider__num">01</span>
+                     <span class="slider__text">Intro</span>
+                  </div>
+                  <div class="slider__item">
+                     <span class="slider__num">02</span>
+                     <span class="slider__text">Work</span>
+                  </div>
+                  <div class="slider__item">
+                     <span class="slider__num">03</span>
+                     <span class="slider__text">About</span>
+                  </div>
+                  <div class="slider__item">
+                     <span class="slider__num">04</span>
+                     <span class="slider__text">Contacts</span>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
 
-      <section class="section">
+      </div>  <!-- ./intro -->
+
+      <section class="section" id="about">
          <div class="container">
 
             <div class="section__header">
@@ -928,6 +935,10 @@
       </footer>
 
    </div> <!-- ./page -->
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <script src="js/app.js"></script>
 
 </body>
 </html>
