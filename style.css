@@ -130,6 +130,7 @@ hr {
    font-size: 30px;
    font-weight: 700;
    color: #fff;
+   cursor: pointer;
 }
 
 /* Navigation */
@@ -167,12 +168,13 @@ hr {
    transition: opacity 0.1s linear;
 }
 
-.nav__link:hover {
-   color: #fce38a;
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
 }
 
-.nav__link:hover:after {
-   opacity: 1;
+.nav__link.active {
+    color: #fce38a;
 }
 
 
@@ -193,6 +195,10 @@ hr {
    top: 24px;
    right: 24px;
    z-index: 1;
+}
+
+.nav-toggle:focus {
+   outline: 0;
 }
 
 .nav-toggle__item {
@@ -685,13 +691,16 @@ hr {
 /* Reviews */
 
 .reviews {
-   padding: 0 110px;
-
    position: relative;
 }
 
+.reviews .slick-slider {
+   padding: 0 110px;
+}
+
 .reviews__item {
-   padding-left: 205px;
+   padding-left: 255px;
+   min-height: 210px;
 
    position: relative;
 }
@@ -714,9 +723,6 @@ hr {
 .reviews__photo--circle {
    padding: 0;
    border-radius: 50%;
-
-   top: -32px;
-   left: -40px;
 }
 
 .reviews__text {
@@ -744,16 +750,26 @@ hr {
    background-color: #f38181;
 }
 
-.reviews__btn {
+.slick-arrow {
+   display: block;
    font-size: 0;
    color: transparent;
+
+   border: 0;
+   background: none;
+   cursor: pointer;
+
    position: absolute;
    top: 50%;
    z-index: 1;
    transform: translateY(-50%);
 }
 
-.reviews__btn:after {
+.slick-arrow:focus {
+   outline: 0;
+}
+
+.slick-arrow:after {
    content: "";
    display: block;
    width: 16px;
@@ -763,13 +779,13 @@ hr {
    border-left: 2px solid #ccc;
 }
 
-.reviews__btn--prev {
+.slick-prev {
    left: 0;
 
    transform: rotate(-45deg);
 }
 
-.reviews__btn--next {
+.slick-next {
    right: 0;
 
    transform: rotate(135deg);
@@ -1374,8 +1390,8 @@ hr {
    }
 
    /* Reviews */
-   .reviews {
-      padding: 0 40px 0 80px;
+   .reviews .slick-slider {
+      padding: 0 40px 0 40px;
    }
 
    .reviews__photo {
@@ -1452,6 +1468,10 @@ hr {
       left: 0;
 
       background-color: #eb8b8d;
+   }
+
+   .nav.active {
+      display: block;
    }
 
    .nav__link {
@@ -1627,11 +1647,11 @@ hr {
    }
 
    /* Reviews */
-   .reviews {
+   .reviews .slick-slider {
       padding: 0 10px;
    }
 
-   .reviews__btn {
+   .slick-arrow {
       top: 18%;
    }
 
